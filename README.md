@@ -56,7 +56,7 @@ flowchart LR
     VAL --> Q[Background integration queue]
     Q --> FB[Firebase]
     Q --> BL[Blynk]
-    API --> OPS[/health /ready /metrics]
+  API --> OPS["/health, /ready, /metrics"]
 ```
 
 Detailed design: [`docs/architecture.md`](docs/architecture.md)
@@ -274,3 +274,4 @@ Key protections include environment-based secrets, ignored local data and build 
 - **Repository abstraction:** local development remains simple while allowing the persistence layer to be replaced later.
 - **Background integration queue:** Firebase/Blynk latency does not block telemetry ingestion.
 - **Single production container:** the API and built React frontend are deployed together for a simple, reproducible runtime.
+

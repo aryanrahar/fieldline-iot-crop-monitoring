@@ -23,7 +23,7 @@ flowchart LR
     Q --> FB[Firebase optional]
     Q --> BL[Blynk optional]
 
-    API --> OBS[/health /ready /metrics]
+  API --> OBS["/health, /ready, /metrics"]
 ```
 
 ## Request flow
@@ -118,4 +118,5 @@ The current architecture is suitable for a single small deployment. If traffic b
 6. Add retention/downsampling for historical telemetry.
 
 Those components are intentionally *not* included today because they would add operational complexity without a demonstrated requirement.
+
 
