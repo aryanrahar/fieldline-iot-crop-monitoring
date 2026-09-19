@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: fieldline-crop-monitoring
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DEMO_MODE
+        value: "true"
+      - key: LOG_LEVEL
+        value: info
+      - key: DEVICE_API_KEY
+        generateValue: true

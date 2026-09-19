@@ -1,0 +1,21 @@
+{
+  "name": "fieldline-crop-monitoring",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "start": "node backend/server.mjs",
+    "api": "node backend/server.mjs",
+    "simulate": "node simulator/sensor-simulator.mjs",
+    "test": "node --test backend/test/*.test.mjs",
+    "test:coverage": "node --experimental-test-coverage --test backend/test/*.test.mjs",
+    "build": "npm --workspace frontend run build",
+    "check": "node scripts/check-syntax.mjs && npm test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

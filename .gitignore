@@ -1,0 +1,17 @@
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+.env
+.env.*
+!.env.example
+data/
+*.jsonl
+*.log
+coverage/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.tmp
