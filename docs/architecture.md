@@ -59,7 +59,7 @@ Key endpoints:
 
 Why JSONL instead of adding PostgreSQL immediately:
 
-- The portfolio/demo workload is small and write-sequential.
+- The current telemetry workload is small and write-sequential.
 - JSONL keeps local and Docker setup dependency-free.
 - The repository boundary isolates storage concerns, so replacing it with PostgreSQL does not require changing HTTP or domain logic.
 
@@ -108,7 +108,7 @@ The metrics implementation is deliberately dependency-free. A production environ
 
 ## Scaling path
 
-The current architecture is suitable for a single small deployment and portfolio demonstration. If traffic becomes materially larger:
+The current architecture is suitable for a single small deployment. If traffic becomes materially larger:
 
 1. Move storage to PostgreSQL/TimescaleDB.
 2. Use per-device authentication and indexed device/time queries.
@@ -118,3 +118,4 @@ The current architecture is suitable for a single small deployment and portfolio
 6. Add retention/downsampling for historical telemetry.
 
 Those components are intentionally *not* included today because they would add operational complexity without a demonstrated requirement.
+

@@ -10,7 +10,7 @@ When `DEVICE_API_KEY` is configured, telemetry producers must send:
 X-Device-Key: <configured value>
 ```
 
-The dashboard read endpoints are public in the portfolio build. Do not expose sensitive field data without adding user authentication.
+The dashboard read endpoints are public in the current deployment configuration. Do not expose sensitive field data without adding user authentication.
 
 ## POST `/readings`
 
@@ -68,3 +68,4 @@ Server-Sent Events endpoint. Optional `deviceId` filter. Events:
 - `/health` — liveness.
 - `/ready` — readiness and queue/store state.
 - `/metrics` — Prometheus text exposition.
+

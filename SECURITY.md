@@ -15,7 +15,7 @@ Never commit `.env`, Firebase credentials, Blynk tokens, Wi-Fi passwords, or dev
 
 ## Known limitations
 
-The portfolio deployment intentionally keeps read-only dashboard endpoints public. A real deployment containing sensitive location or farm data should add user authentication and authorization. A shared device key should be replaced by per-device credentials with rotation and revocation.
+Read-only dashboard endpoints are unauthenticated by default. Deployments containing sensitive location or farm data should add user authentication and authorization. For multiple physical devices, replace the shared device key with per-device credentials that support rotation and revocation.
 
 ## Reporting
 
